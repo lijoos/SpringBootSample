@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: image-service
+server:
+  port: 8200
+eureka:
+  server:
+    port: 8761
+  instance:
+    hostname: ${HOST_NAME:localhost}
+  client:
+    service-url: 
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:${eureka.server.port}}/eureka/

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gallery-service
+server:
+  port: 8100
+eureka:
+  server:
+    port: 8761
+  instance:
+    hostname: ${HOST_NAME:localhost}
+  client:
+    service-url: 
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:${eureka.server.port}}/eureka/
+      
+      
